@@ -1,0 +1,22 @@
+.temperature-scale {
+  //   background: linear-gradient(red, orange, yellow, green, blue) !important;
+  background: linear-gradient(
+    to right,
+    rgb(135, 50, 169),
+    rgb(93, 65, 176),
+    rgb(072, 85, 174),
+    rgb(099, 123, 243),
+    rgb(099, 168, 238),
+    rgb(109, 187, 208),
+    rgb(86, 148, 136),
+    rgb(94, 153, 58),
+    rgb(156, 191, 90),
+    rgb(238, 191, 64),
+    rgb(229, 150, 54),
+    rgb(229, 100, 54)
+  );
+
+  border: black 1px solid;
+  border-radius: 10px;
+  //   border-radius: 2px;÷
+}

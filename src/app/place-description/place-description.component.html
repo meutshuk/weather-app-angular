@@ -1,0 +1,32 @@
+<div class="m-7">
+  <div class="text-[#497b9d] font-[nunito] font-extrabold text-5xl ml-16 pl-1">
+    {{ date | date : "hh:mm" }}
+  </div>
+  <div class="text-[#497b9d] font-[nunito] font-extrabold text-5xl">
+    {{ date | date : "dd.MM.y" }}
+  </div>
+</div>
+<div class="font-[nunito] text-[#e63946] font-extrabold text-8xl mb-10">
+  {{ weatherData?.location.name }}
+</div>
+
+<div class="w-full mb-8">
+  <div class="flex gap-8 items-center mb-4">
+    <div class="text-[#497b9d] font-[nunito] font-extrabold text-5xl">
+      {{ weatherData?.current.temp_c }}
+    </div>
+    <div class="text-[#497b9d] font-[nunito] font-normal text-base">
+      Feels like
+      {{ weatherData?.current.feelslike_c | number : "1.0-2" }}
+    </div>
+  </div>
+  <div class="temperature-scale h-3 w-full flex items-center">
+    <div
+      class="static h-5 w-5 rounded-xl bg-white border-2 border-black"
+      [style.margin-left.%]="weatherData?.current.feelslike_c * 1.8"
+    ></div>
+  </div>
+</div>
+<div class="text-[#497b9d] text-2xl font-normal">
+  {{ weatherData?.current.condition.text }}
+</div>

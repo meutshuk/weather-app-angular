@@ -1,10 +1,12 @@
-<div class="flex justify-between px-16 py-6">
+<div class="flex justify-between px-16 pt-6 pb-16 border-b border-[#a8dadc]">
   <div class="font-[Nunito] text-6xl font-extrabold text-[#348180]">
     weather
   </div>
   <input
+    #cityName
     type="text"
     placeholder="the name of the city or settlement"
     class="bg-[#a8dadc] w-[40%] p-3 rounded-full focus:outline-none text-center focus:placeholder-transparent placeholder:lowercase"
+    (input)="typeName(cityName.value)"
   />
 </div>
